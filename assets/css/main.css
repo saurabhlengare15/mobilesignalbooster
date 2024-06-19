@@ -656,13 +656,14 @@ section,
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services .service-item {
-  padding: 50px 30px;
+  padding: 20px 30px;
   transition: all ease-in-out 0.4s;
   height: 100%;
 }
 
 .featured-services .service-item .icon {
-  margin-bottom: 10px;
+  /* margin-bottom: 5px; */
+  text-align: center;
 }
 
 .featured-services .service-item .icon i {
@@ -673,7 +674,7 @@ section,
 
 .featured-services .service-item h4 {
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 20px;
 }
 
@@ -1471,104 +1472,6 @@ section,
   color: var(--contrast-color);
 }
 
-/*--------------------------------------------------------------
-# Faq Section
---------------------------------------------------------------*/
-.faq .content h3 {
-  font-weight: 400;
-  font-size: 34px;
-}
-
-.faq .content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.faq .faq-container {
-  margin-top: 15px;
-}
-
-.faq .faq-container .faq-item {
-  position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0px 5px 25px 0px color-mix(in srgb, var(--default-color), transparent 90%);
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.faq .faq-container .faq-item h3 {
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 24px;
-  margin: 0 30px 0 32px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item h3 span {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item .faq-icon {
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  font-size: 22px;
-  line-height: 0;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
 
 /*--------------------------------------------------------------
 # Portfolio Section
@@ -2819,7 +2722,6 @@ section,
 }
 
 #pricing{
-  /* background-color: black; */
   height: 450px;
 }
 
@@ -2854,4 +2756,8 @@ section,
 #clients p{
   text-align: justify;
   font-family: var(--nav-font);
+}
+
+#featured-services{
+  padding: 20px 0px;
 }
