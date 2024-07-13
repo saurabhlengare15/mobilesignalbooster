@@ -2795,6 +2795,11 @@ section,
   }
 }
 
+.logos{
+  display: flex;
+  justify-content: center;
+}
+
 .services .card-title {
   font-weight: 700;
   text-align: center;
