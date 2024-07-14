@@ -1814,22 +1814,46 @@ section,
   padding: 10px 15px;
 }
 
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-  height: 290px;
-}
-
 .contact .php-email-form button[type=submit] {
   background: var(--accent-color);
   color: var(--contrast-color);
   border: 0;
-  padding: 13px 50px;
+  padding: 13px 30px;
   transition: 0.4s;
   border-radius: 4px;
+  height: 50px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+}
+
+.contact .php-email-form .help{
+  display: flex;
+  padding: 0px 20px;
+  justify-content: space-evenly;
+  /* background-color: red; */
+}
+
+.contact .php-email-form .help .help-contact{
+  /* background-color: yellow; */
+}
+
+.contact .php-email-form .help .help-contact p{
+  font-size: 16px;
+  font-weight: 500;
+  color: #7e7e7e;
+  line-height: 0;
+  letter-spacing: 0.8px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.contact .php-email-form .help .help-contact h4{
+  font-weight: 700;
+  color: #E90074;
+  line-height: 1.5;
+  margin-top: -10px;
 }
 
 @keyframes animate-loading {
