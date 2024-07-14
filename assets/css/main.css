@@ -2671,9 +2671,11 @@ section,
 /* custom css */
 .number{
   background-color: #0367a1;
-  height: 250px;
+  /* height: 250px; */
   display: flex;
+  /* justify-content: space-evenly; */
   align-items: center;
+  padding: 30px 0px;
 }
 
 .number h1{
@@ -2692,7 +2694,27 @@ section,
 .number .contact-no{
   display: flex;
   align-items: center;
+  /* background-color: yellow; */
+}
 
+.number .contact-no img{
+  border-radius: 100%;
+}
+
+.contact-about img{
+
+  /* background-color: red; */
+}
+
+.contact-about h1{
+  font-weight: 600;
+  line-height: 100%;
+  /* color: #77E4C8; */
+  color: #FFF078;
+}
+
+.contact-no{
+  /* background-color: yellow; */
 }
 
 #pricing{
@@ -2798,6 +2820,13 @@ section,
 .logos{
   display: flex;
   justify-content: center;
+}
+
+.executive{
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+  /* font-weight: 600; */
 }
 
 .services .card-title {
