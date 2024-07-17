@@ -2752,6 +2752,12 @@ section,
   border-radius: 100%;
 }
 
+.number span{
+  /* color: red; */
+  font-size: 20px;
+  font-weight: 400;
+}
+
 @media(max-width: 510px){
   .number .contact-no{
     /* background-color: red; */
