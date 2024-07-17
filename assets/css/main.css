@@ -820,8 +820,8 @@ section,
   padding: 20px 40px;
   max-width: 90%;
   transition: 0.3s;
-  opacity: 0.5;
-  filter: grayscale(100);
+  /* opacity: 0.5; */
+  /* filter: grayscale(100); */
 }
 
 .clients .client-logo img:hover {
@@ -1748,6 +1748,11 @@ section,
   width: 100%;
 }
 
+.contact .php-email-form h2{
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
 }
@@ -1833,7 +1838,7 @@ section,
 
 .contact .php-email-form .help{
   display: flex;
-  padding: 0px 20px;
+  padding: 10px 20px;
   justify-content: space-evenly;
   /* background-color: red; */
 }
@@ -2774,6 +2779,11 @@ section,
   color: #FFF078;
 }
 
+.carousal{
+  /* width: 10px; */
+  pointer-events: none;
+}
+
 .contact-no{
   /* background-color: yellow; */
 }
@@ -2838,6 +2848,11 @@ section,
 
 .services {
   padding-bottom: 40px;
+}
+
+#services h2{
+  font-size: 45px;
+  font-weight: 550;
 }
 
 .services .card {
