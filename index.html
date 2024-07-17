@@ -29,44 +29,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <script>
-    async function handleSubmit(event) {
-      event.preventDefault(); // Prevent the default form submission
-
-      const form = event.target;
-      const formData = new FormData(form);
-
-      const data = {};
-      formData.forEach((value, key) => {
-        data[key] = value;
-        console.log('in foreach');
-        console.log(value);
-      });
-      console.log('hello');
-
-      try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbwLw5VhtZ_nexhtVcv8Sl2yEPh6-thi2aAPu6_zrehg2UaB4_OmRxkKxnXThwrZYTrs/exec', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          },
-          body: new URLSearchParams(data)
-        });
-
-        const result = await response.json();
-        console.log(result); // Handle the response as needed
-
-        if (result.result === "success") {
-          alert("Form submitted successfully!");
-        } else {
-          alert("Failed to submit form. Please try again.");
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        alert("An error occurred while submitting the form. Please try again.");
-      }
-    }
-  </script>
 </head>
 
 <body class="service-details-page">
@@ -450,7 +412,8 @@
     <div class="container" data-aos="fade-up">
       <h2 class="text-center mb-4" style="color: #0367a1;">About Our Product</h2>
       <p>In addition to supporting various carrier-allotted frequencies, the signal boosters we have for you are
-        compatible with numerous generations, including 2G, 3G, and 4G signals. At BalajiSignalBoosters, we ensure that every
+        compatible with numerous generations, including 2G, 3G, and 4G signals. At BalajiSignalBoosters, we ensure that
+        every
         network booster equipment is compatible with all of the nation's main carriers, including Vodafone, Jio, and
         Airtel. We are very sure that any of our network signal booster will provide you with strong and stable
         connections in places with poor connectivity for homes and offices, including basement levels.</p>
@@ -730,21 +693,42 @@
         </div>
         <div class="col-lg-1"></div>
         <div class="col-lg-6">
-          <form onsubmit="handleSubmit(event)" class="php-email-form">
+          <!-- <form class="mb-4 flex flex-wrap justify-between" id="form">
+
+
+            <div class="flex flex-col w-full mb-4">
+              <label class="field-label" for="email">YoName</label>
+              <input class="bg-green-100 px-2 py-1 outline-none" type="text" name="Name" id="email">
+            </div>
+            <div class="flex flex-col w-full mb-4">
+              <label class="field-label" for="password">Email</label>
+              <textarea class="bg-green-100 px-2 py-1 outline-none" type="text" name="Email" id="Message"></textarea>
+            </div>
+            <div class="flex flex-col w-full mb-4">
+              <label class="field-label" for="password">Contact</label>
+              <textarea class="bg-green-100 px-2 py-1 outline-none" type="text" name="Contact" id="Message"></textarea>
+            </div>
+
+            <input type="date" name="Time" id="">
+            <input type="checkbox" name="Check" value="true" id="">
+            <button class="bg-orange-300 px-3 py-1 text-white mx-auto" type="submit" id="submit">Submit</button>
+          </form> -->
+
+          <form class="php-email-form" id="form">
             <div class="row">
               <h2>Our Expert Will Help You!</h2>
               <div class="form-group mt-3">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                <input type="text" name="Name" class="form-control" id="Name" placeholder="Your Name" required="">
               </div>
               <div class="form-group mt-3">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email" required="">
               </div>
             </div>
             <div class="form-group mt-3">
-              <input type="number" class="form-control" name="contact" id="contact" placeholder="Contact No" required="">
+              <input type="number" class="form-control" name="Contact" id="Contact" placeholder="Contact No" required="">
             </div>
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="area" id="area" placeholder="Area" required="">
+              <input type="text" class="form-control" name="Area" id="Area" placeholder="Area" required="">
             </div>
             <div class="my-3">
               <div class="loading">Loading</div>
@@ -752,7 +736,7 @@
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
             <div class="help">
-              <button type="submit">REQUEST A CALL BACK</button>
+              <button type="submit" id="submit">REQUEST A CALL BACK</button>
               <div class="tp"></div>
               <div class="help-contact">
                 <p>For Immediate Help</p>
@@ -760,8 +744,31 @@
               </div>
             </div>
           </form>
-        </div><!-- End Contact Form -->
 
+          <script>
+            const form = document.querySelector("#form")
+            const submitButton = document.querySelector("#submit")
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyYha-lSmNutizLl3xC9WK-8ryyRVVLO1Jk8s3z2CwHnk-OvbCjOHUNfAHtIYN7aiji/exec'
+
+            form.addEventListener('submit', e => {
+              submitButton.disabled = true
+              e.preventDefault()
+              let requestBody = new FormData(form)
+              fetch(scriptURL, { method: 'POST', body: requestBody })
+                .then(response => {
+                  alert('Details Saved Successfully!', response)
+                  submitButton.disabled = false
+                  form.reset();
+                })
+                .catch(error => {
+                  alert('Error!', error.message)
+                  submitButton.disabled = false
+                }
+                )
+            })
+          </script>
+          
+        </div><!-- End Contact Form -->
       </div>
 
     </div>
