@@ -2772,6 +2772,20 @@ section,
   }
 }
 
+@media(min-width: 768px) and (max-width: 991px){
+
+  .number .contact-no{
+    /* background-color: red; */
+    margin: 0px auto;
+    width: 70%;
+  }
+
+  .number .contact-about{
+    /* background-color: pink; */
+    width: 125%;
+  }
+}
+
 .contact-about h1{
   font-weight: 600;
   line-height: 100%;
@@ -2781,7 +2795,22 @@ section,
 
 .carousal{
   /* width: 10px; */
-  pointer-events: none;
+  /* pointer-events: none; */
+}
+
+.carousal .order_now{
+  position: absolute;
+  bottom: 35px;
+  left: 150px;
+  background-color: rgb(255, 184, 53);
+  border: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #00012c;
 }
 
 .contact-no{
@@ -2812,6 +2841,15 @@ section,
   color: #0367a1;
   font-weight: 600;
   font-size: 22px;
+}
+
+#pricing .section-title p,li{
+  text-align: justify;
+}
+
+#featured-services .service-item p{
+  /* background-color: red; */
+  text-align: center;
 }
 
 .whatsapp{
@@ -2920,6 +2958,7 @@ section,
 
 .services .card-text {
   color: #5e5e5e;
+  text-align: justify;
 }
 
 .services .coverage{
