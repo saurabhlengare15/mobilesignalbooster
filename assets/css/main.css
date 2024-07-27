@@ -72,23 +72,25 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 20px 0;
+  /* color: var(--default-color);ec378e */
+  color: #ec378e;
+  /* background-color: var(--background-color); */
+  background-color: #070d41;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
   margin-bottom: -60px;
 }
 
 .header .logo {
-  line-height: 1;
+  padding-left: 50px;
 }
 
 .header .logo h1 {
   font-size: 32px;
   font-weight: 300;
   margin: 0;
-  color: var(--heading-color);
+  color: #ec378e;
 }
 
 .header .logo span {
@@ -178,7 +180,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: #fff;
     font-size: 15px;
     padding: 0 2px;
     font-family: var(--nav-font);
@@ -189,6 +191,7 @@ h6 {
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
+    letter-spacing: 1px;
   }
 
   .navmenu a i,
@@ -206,7 +209,7 @@ h6 {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: var(--nav-hover-color);
+    background-color: #fff;
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -222,7 +225,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: #ec378e;
   }
 
   .navmenu .dropdown ul {
@@ -2750,6 +2753,7 @@ section,
 .number .contact-no{
   display: flex;
   align-items: center;
+  /* position: relative; */
   /* background-color: yellow; */
 }
 
@@ -2757,11 +2761,30 @@ section,
   border-radius: 100%;
 }
 
+.number .contact-no img:hover{
+  cursor: pointer;
+}
+
+/* .number .contact-no .overlay{
+  position: absolute;
+  height: 100px;
+  opacity: 0;
+  background-color: red;
+  transition: .3s ease;
+  width: 95%;
+} */
+
+/* .number .contact-no:hover .overlay{
+  opacity: 1;
+} */
+
+
 .number span{
   /* color: red; */
   font-size: 20px;
   font-weight: 400;
 }
+
 
 @media(max-width: 510px){
   .number .contact-no{
